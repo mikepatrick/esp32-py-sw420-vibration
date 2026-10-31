@@ -1,0 +1,30 @@
+{
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/src/lib"
+    ],
+    "files.associations": {
+        ".mpyproject.json": "jsonc"
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": false,
+    "files.exclude": {
+        "*.build": true,
+        "*.egg-info": true
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "files.trimTrailingWhitespace": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingModuleSource": "none"
+    },
+    "python.terminal.activateEnvironment": false,
+    "python.analysis.stubPath": "typings",
+    "python-envs.defaultEnvManager": "ms-python.python:venv"
+}
