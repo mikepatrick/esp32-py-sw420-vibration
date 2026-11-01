@@ -116,12 +116,11 @@ def sync_ntp_time():
     except Exception as e:
         print("Failed to sync NTP time:", e)
 
-def get_time_and_date_strings(utc_offset_hours: int = 0) -> tuple[str, str]:
+def get_time_and_date_strings(utc_offset_hours: int = -5) -> tuple[str, str]:
 	"""Returns the current time and date as formatted strings, adjusted for the specified UTC offset."""
 	current_time = time.time()
 	local_time = current_time + (utc_offset_hours * 3600)  # Adjust for your timezone
 	local_tuple = time.localtime(local_time)
-	print(local_tuple)
 	year, month, day, hour, minute, second, _, _ = local_tuple[0:8]
 	time_str = f"{hour:02d}:{minute:02d}"
 	date_str = f"{year}-{month:02d}-{day:02d}"
